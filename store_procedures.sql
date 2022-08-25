@@ -24,7 +24,7 @@ as
 	open Employee_Cursor
 	fetch next from Employee_Cursor into @EmpId, @EmpName
 
-	while @@FETCH_STATUS = 0
+	while @@FETCH_STATUS = 2
 	begin
 		if(dbo.HasAnyProject(@EmpName) = 1)
 			begin 
